@@ -69,7 +69,7 @@ public class Job_Start extends JFrame {
 
         Select_Job = new JLabel("Select Job");
         Select_Job.setFont(new Font("San Serif", Font.PLAIN, 20));
-        Select_Job.setBounds(250,150,200,25);
+        Select_Job.setBounds(330,150,200,25);
         Select_Job.setForeground(Color.black);
         add(Select_Job);
         add(frame);
@@ -100,19 +100,13 @@ public class Job_Start extends JFrame {
         add(JBtn);
         add(frame);
 
-        stopbtn = new JButton("Job Completed");
-        stopbtn.setBounds(290,350,200,40);
-        stopbtn.setForeground(Color.white);
-        stopbtn.setFocusPainted(false);
-        stopbtn.setBackground(new Color(0x24A692));
-        stopbtn.setFont(new Font("San Serif", Font.PLAIN, 20));
-        add(stopbtn);
-        add(frame);
 
        JBtn.addActionListener(new ActionListener() {
            @Override
            public void actionPerformed(ActionEvent e) {
                JOptionPane.showMessageDialog(null, "job started");
+
+
                try {
                    jobShedule();
                } catch (InterruptedException ex) {
@@ -209,7 +203,7 @@ public class Job_Start extends JFrame {
         ArrayList<Calendar> TIMES = new ArrayList<>();
        for(int timeTo=0; timeTo<allTime.length;timeTo++){
            Calendar date = Calendar.getInstance();
-           date.set(Calendar.HOUR_OF_DAY,4);
+           date.set(Calendar.HOUR_OF_DAY,8);
            date.set(Calendar.MINUTE,allTime[timeTo]);
            date.set(Calendar.SECOND,0);
            TIMES.add(date);

@@ -27,8 +27,8 @@ public class TaskController {
         try {
             String query = "insert into Task_Table(Task_Id,Task_Name) values(?,?)";
             PreparedStatement st = this.db.connection.prepareStatement(query);
-            st.setString(1, taskModel.getTask_Name());
-            st.setInt(2, taskModel.getTask_Id());
+            st.setString(2, taskModel.getTask_Name());
+            st.setInt(1, taskModel.getTask_Id());
             return this.db.manipulate(st);
         } catch (SQLException var4) {
             var4.printStackTrace();
